@@ -1,0 +1,31 @@
+@startuml
+namespace StoreManager.Services.Module1{
+    class Class1A{
+    }
+    class Class1B{
+    }
+}
+StoreManager.Services.Module1.Class1A --> StoreManager.Services.Module2.Class2B
+
+namespace StoreManager.Services.Module2{
+    class Class2A{
+    }
+    class Class2B{
+    }
+}
+
+StoreManager.Services.Module2.Class2A --> StoreManager.Services.Module3.Class3B
+
+namespace StoreManager.Services.Module3{
+    class Class3A{
+    }
+    class Class3B{
+    }
+}
+
+StoreManager.Services.Module3.Class3A --> StoreManager.Services.Module1.Class1B
+
+note on link #red 
+    Cyclic dependency
+end note
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+namespace StoreManager {
+
+    namespace WebApp {
+        class FreezerService{    
+        }
+    }
+    note bottom #red: Resides in wrong namespace
+
+    namespace Services {
+        class ArticleService{    
+        }
+    }
+    note bottom #green: Resides in correct namespace
+}
+@enduml

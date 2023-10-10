@@ -1,0 +1,9 @@
+@startuml
+interface StoreManager.Services.IService{
+}
+class StoreManager.Services.ArticleService implements StoreManager.Services.IService{
+}
+class StoreManager.Services.FreezerServ implements StoreManager.Services.IService{
+}
+note bottom of FreezerServ #red: Has incorrect name
+@enduml

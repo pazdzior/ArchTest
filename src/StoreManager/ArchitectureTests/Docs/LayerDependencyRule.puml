@@ -1,0 +1,27 @@
+@startuml
+namespace StoreManger {
+   namespace Repository{
+    class Article
+   }
+}
+namespace StoreManger{
+   namespace Services{
+     class ArticleService
+   }
+}
+
+namespace StoreManger {
+   namespace WebApp{
+     class ArticleController
+   }
+}
+
+ArticleController --> ArticleService
+note on link #green: Allowed
+
+ArticleService --> Article
+note on link #green: Allowed
+
+ArticleController --> Article
+note on link #red: Forbidden
+@enduml
